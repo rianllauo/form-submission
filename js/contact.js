@@ -7,28 +7,49 @@ let username = namaId('username'),
    subject = namaId('subject'),
    message = namaId('message')
    errorMsg = classes('eror'),
-   form = namaId('submit')      
+   button = namaId('submit')      
 
-function apake(){
+  
+function submitData(){
    engine(username, 0, 'Please input your name');
-   engine(email, 1, 'Please input your');
-   engine(phone, 2, 'Please input your');
+   engine(email, 1, 'Please input your email');
+   engine(phone, 2, 'Please input your phone number');
    engine(subject, 3, 'Please input your subject');
    engine(message, 4, 'Please input your message')  
 }
 
+function onInput(){
+   input(username, 0);
+   input(email, 1);
+   input(phone, 2);
+   input(subject, 3);
+   input(message, 4);
+}
+
+let input = (id, serial) => {
+   function success() {
+      errorMsg[serial].innerHTML = "";
+      id.style.border = "2.5px solid #6366f1";
+   }
+
+   if(id.value.trim() !== ""){
+      return success()
+   }else{
+      return
+   }
+}
+
 let engine = (id, serial, warning) => {
+
    function fail() {
       errorMsg[serial].innerHTML = warning;
-      id.style.border = "2px solid red"
-
-      return false
+      id.style.border = "2.5px solid #e11d48"
+   
    }
    function success() {
       errorMsg[serial].innerHTML = "";
-      id.style.border = "2px solid green";
+      id.style.border = "2.5px solid #6366f1";
      
-      return true
    }
 
    if(id.value.trim() === ""){
@@ -36,9 +57,7 @@ let engine = (id, serial, warning) => {
    } else if(id.value.trim() !== ""){
       success()
    }   
-   
-   
-   
+     
    if(namaId('username').value && namaId('email').value && namaId('phone').value && namaId('subject').value && namaId('message').value !== ""){
      return emailTo()
    }
@@ -52,4 +71,6 @@ let engine = (id, serial, warning) => {
   
 }
 
-console.log(id('username'))
+
+
+

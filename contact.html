@@ -28,28 +28,28 @@
    <main>
       <!-- contact section -->
       <div class="contact">
-         <h1>GET IN TOUCH</h1>
+         
 
 
          <form id="form">
-
+            <h1>GET IN TOUCH</h1>
             <label >Name</label>
-            <input class="input-name" type="text" id="username" >
+            <input oninput="onInput()" class="input-name" type="text" id="username" >
             <div class="eror"></div>
 
             <label >Email</label>
-            <input class="input-email" type="email" id="email" >
+            <input oninput="onInput()" class="input-email" type="email" id="email" >
             <div class="eror"></div>
 
 
             <label >Phone Number</label>
-            <input class="input-phone" type="number" id="phone">
+            <input oninput="onInput()" class="input-phone" type="number" id="phone">
             <div class="eror"></div>
 
 
             <label >Subject</label>
-            <select class="input-subject" id="subject">
-               <option value="">-</option>
+            <select oninput="onInput()" class="input-subject" id="subject">
+               <option value="">-- PLEASE SELECT YOUR SUBJECT --</option>
                <option value="front end">front end</option>
                <option value="back end">back end</option>
                <option value="full stack">fullstack</option>
@@ -58,12 +58,12 @@
 
 
             <label >Your Message</label>
-            <textarea class="input-message" id="message" ></textarea>
+            <textarea oninput="onInput()" class="input-message" id="message" ></textarea>
             <div class="eror"></div>
 
 
             <div class="btn-submit">
-               <button type="button" id="submit" onclick="apake()" class="eror">Submit</button>
+               <button type="button" id="submit" onclick="submitData()" class="eror">Submit</button>
             </div>
 
          </form>
@@ -72,7 +72,6 @@
       </div>
       <!-- contact section -->
 
-      <p class="test"></p>
    </main>
 
 
