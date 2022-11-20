@@ -16,7 +16,7 @@
                <img src="/img/brandred.png">
             </li>
             <li><a href="/index.html" class="menu-item">Home</a></li>
-            <li><a href="" class="menu-item">My Project</a></li>
+            <li><a href="/myproject.html" class="menu-item">My Project</a></li>
          </div>
          <a href="/contact.html" class="btn-contact">
             Contact Me
@@ -28,42 +28,40 @@
    <main>
       <!-- contact section -->
       <div class="contact">
-         
-
 
          <form id="form">
             <h1>GET IN TOUCH</h1>
             <label >Name</label>
             <input oninput="onInput()" class="input-name" type="text" id="username" >
-            <div class="eror"></div>
+            <div class="errorMessage"></div>
 
             <label >Email</label>
             <input oninput="onInput()" class="input-email" type="email" id="email" >
-            <div class="eror"></div>
+            <div class="errorMessage"></div>
 
 
             <label >Phone Number</label>
             <input oninput="onInput()" class="input-phone" type="number" id="phone">
-            <div class="eror"></div>
+            <div class="errorMessage"></div>
 
 
             <label >Subject</label>
             <select oninput="onInput()" class="input-subject" id="subject">
                <option value="">-- PLEASE SELECT YOUR SUBJECT --</option>
-               <option value="front end">front end</option>
-               <option value="back end">back end</option>
-               <option value="full stack">fullstack</option>
+               <option value="front end">Front End</option>
+               <option value="back end">Back End</option>
+               <option value="full stack">Full Stack</option>
             </select>
-            <div class="eror"></div>
+            <div class="errorMessage"></div>
 
 
             <label >Your Message</label>
-            <textarea oninput="onInput()" class="input-message" id="message" ></textarea>
-            <div class="eror"></div>
+            <textarea oninput="onInput()" class="input-message" id="message"></textarea>
+            <div class="errorMessage"></div>
 
 
             <div class="btn-submit">
-               <button type="button" id="submit" onclick="submitData()" class="eror">Submit</button>
+               <button type="button" id="submit" onclick="onSubmit()">Submit</button>
             </div>
 
          </form>
